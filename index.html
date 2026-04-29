@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ポートフォリオ | 自己紹介</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      background: #fff;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .link-box {
+      display: block;
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-decoration: none;
+      color: #333;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .link-box:hover {
+      background: #f0f0f0;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ポートフォリオ</h1>
+  <p>Web制作 / インフラ学習</p>
+</header>
+
+<section>
+  <h2>自己PR</h2>
+  <p>
+    これまでITインフラやプログラミングを独学で勉強してきました。<br><br>
+    ITインフラではAWSやGCPを使用して簡単な画像配信サイトの構築や、LPIC-1、CCNA、AWS CLF、AWS SAAの資格を取得しました。<br><br>
+    プログラミングではJava、Servlet、SQLのテキストを中心に学習し、自分で設計したWebアプリケーションの作成などを行いました。
+  </p>
+</section>
+
+<section>
+  <h2>AWSを使用した画像配信サイトの構築</h2>
+
+  <div class="grid">
+    <div>
+      <h3>構築編</h3>
+      <ol>
+        <li>初期設定（IAM / CloudTrail / CloudWatch）</li>
+        <li>VPCネットワーク構築</li>
+        <li>EC2 Webサーバー構築</li>
+        <li>Route53 ドメイン設定</li>
+        <li>RDS DBサーバー構築</li>
+        <li>WordPress構築</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3>運用編</h3>
+      <ol start="7">
+        <li>S3画像保存</li>
+        <li>ELB負荷分散</li>
+        <li>RDS冗長化</li>
+        <li>CloudWatch監視</li>
+        <li>IAM権限管理</li>
+      </ol>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <h2>作成したWebアプリケーション</h2>
+
+  <h3>EmployeeManager（社員情報管理システム）</h3>
+
+  <div class="grid">
+    <div>
+      <p><strong>機能</strong></p>
+      <ul>
+        <li>ログイン / ログアウト</li>
+        <li>ユーザーレベルによる機能制限</li>
+        <li>社員情報の閲覧・登録・編集・削除</li>
+      </ul>
+    </div>
+
+    <div>
+      <p><strong>技術</strong></p>
+      <ul>
+        <li>Java / Servlet / JSP / HTML / SQL</li>
+        <li>Eclipse / MySQL</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    ※ユーザーレベルによる機能制限<br>
+    レベル3（管理者）：全操作可能<br>
+    レベル2（管理職）：社員管理可能<br>
+    レベル1（一般）：閲覧のみ
+  </p>
+
+</section>
+
+<section>
+  <h2>制作物</h2>
+
+  <!-- ★ここだけURL差し替え -->
+  <a href="https://あなたのID.github.io/product/" class="link-box">
+    商品紹介ページを見る
+  </a>
+
+  <a href="https://あなたのID.github.io/company/" class="link-box">
+    会社ホームページを見る
+  </a>
+
+</section>
+
+<footer>
+  <p>© 2026 Portfolio</p>
+</footer>
+
+</body>
+</html>
