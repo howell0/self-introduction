@@ -1,150 +1,263 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ポートフォリオ | 自己紹介</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      line-height: 1.6;
-    }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    section {
-      background: #fff;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .link-box {
-      display: block;
-      border: 1px solid #ddd;
-      padding: 15px;
-      text-decoration: none;
-      color: #333;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-    .link-box:hover {
-      background: #f0f0f0;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      color: #777;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Self Introduction</title>
+
+<style>
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* コンテンツ */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+  border-left: 5px solid #4ca1af;
+  padding-left: 10px;
+}
+
+/* 表 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  background: #4ca1af;
+  color: #fff;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  vertical-align: top;
+}
+
+/* AWS見出し */
+.build {
+  background: #d6eaf8;
+  color: #000;
+  text-align: center;
+}
+
+/* ボタンリンク */
+.link-box {
+  display: block;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s;
+}
+
+.link-box:hover {
+  background: #f0f8ff;
+  transform: translateY(-2px);
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #777;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>ポートフォリオ</h1>
-  <p>Web制作 / インフラ学習</p>
+  <h1>Self Introduction</h1>
+  <p>imamura</p>
 </header>
 
+<div class="container">
+
 <section>
-  <h2>自己PR</h2>
-  <p>
-    これまでITインフラやプログラミングを独学で勉強してきました。<br><br>
-    ITインフラではAWSやGCPを使用して簡単な画像配信サイトの構築や、LPIC-1、CCNA、AWS CLF、AWS SAAの資格を取得しました。<br><br>
-    プログラミングではJava、Servlet、SQLのテキストを中心に学習し、自分で設計したWebアプリケーションの作成などを行いました。
-  </p>
+<h2>自己PR</h2>
+<p>
+これまでITインフラやプログラミングを独学で勉強してきました。<br><br>
+ITインフラではAWSやGCPを使用して簡単な画像配信サイトの構築や、
+LPIC-1、CCNA、AWS CLF、AWS SAAの資格を取得しました。<br><br>
+プログラミングではJava、Servlet、SQLを中心に学習し、
+自分で設計したWebアプリケーションの作成を行いました。
+</p>
 </section>
 
 <section>
-  <h2>AWSを使用した画像配信サイトの構築</h2>
+<h2>AWSを使用した画像配信サイトの構築</h2>
 
-  <div class="grid">
-    <div>
-      <h3>構築編</h3>
-      <ol>
-        <li>初期設定（IAM / CloudTrail / CloudWatch）</li>
-        <li>VPCネットワーク構築</li>
-        <li>EC2 Webサーバー構築</li>
-        <li>Route53 ドメイン設定</li>
-        <li>RDS DBサーバー構築</li>
-        <li>WordPress構築</li>
-      </ol>
-    </div>
+<table>
 
-    <div>
-      <h3>運用編</h3>
-      <ol start="7">
-        <li>S3画像保存</li>
-        <li>ELB負荷分散</li>
-        <li>RDS冗長化</li>
-        <li>CloudWatch監視</li>
-        <li>IAM権限管理</li>
-      </ol>
-    </div>
-  </div>
+<tr>
+<th>工番</th>
+<th>工程</th>
+<th>内容</th>
+</tr>
+
+<tr>
+<th colspan="3" class="build">構築編</th>
+</tr>
+
+<tr>
+<td>1.AWS</td>
+<td>初期設定</td>
+<td>AWSアカウント作成、CloudWatchで料金アラート設定、IAMで作業用ユーザー作成、CloudTrailで操作ログ記録</td>
+</tr>
+
+<tr>
+<td>2.VPC</td>
+<td>ネットワーク構築</td>
+<td>ネットワークのIPアドレス設定、VPC作成、サブネット作成、ルーティング設定</td>
+</tr>
+
+<tr>
+<td>3.EC2</td>
+<td>Webサーバー構築</td>
+<td>EC2インスタンス設置、SSH接続、Apacheインストール、ファイアウォール設定(セキュリティグループ)、ElasticIPアドレスで固定</td>
+</tr>
+
+<tr>
+<td>4.Route53</td>
+<td>ドメイン登録</td>
+<td>ドメイン購入、Route53でDNS設定</td>
+</tr>
+
+<tr>
+<td>5.RDS</td>
+<td>DBサーバー構築</td>
+<td>RDS用のプライベートサブネット作成、RDS設置、WebサーバーからRDSに接続</td>
+</tr>
+
+<tr>
+<td>6.EC2</td>
+<td>WordPress構築</td>
+<td>WordPress用のデータベース作成、WordPressインストール、設定</td>
+</tr>
+
+<tr>
+<th colspan="3" class="build">運用編</th>
+</tr>
+
+<tr>
+<td>7.S3</td>
+<td>画像の保存先変更</td>
+<td>S3バケット作成、WordPressの画像をS3にアップロード</td>
+</tr>
+
+<tr>
+<td>8.ELB</td>
+<td>Webレイヤ冗長化</td>
+<td>AMIから2つ目のEC2起動、ELBで2つのEC2に負荷分散</td>
+</tr>
+
+<tr>
+<td>9.RDS</td>
+<td>DBレイヤ冗長化</td>
+<td>マスタースレーブ構成の設定</td>
+</tr>
+
+<tr>
+<td>10.CloudWatch</td>
+<td>システム監視</td>
+<td>CloudWatchの設定、アラート確認</td>
+</tr>
+
+<tr>
+<td>11.IAM</td>
+<td>アクセス権限管理</td>
+<td>IAMポリシー、グループ、ユーザー、ロール作成</td>
+</tr>
+
+</table>
+</section>
+
+<section>
+<h2>作成したWebアプリケーション</h2>
+
+<h3>EmployeeManager（社員情報管理システム）</h3>
+
+<table>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+
+<tr>
+<td>機能</td>
+<td>
+ログイン / ログアウト<br>
+社員情報の閲覧・登録・編集・削除<br>
+ユーザーレベルによる機能制限※
+</td>
+</tr>
+
+<tr>
+<td>技術・使用ソフト</td>
+<td>
+Java / Servlet / JSP / HTML / SQL<br>
+Eclipse / MySQL
+</td>
+</tr>
+
+<tr>
+<td>※ユーザーレベルによる機能制限</td>
+<td>
+・システム管理者：レベル3・・・社員、ユーザー情報の閲覧、新規登録、編集、削除全て可能<br>
+・管理職：レベル2・・・社員情報の閲覧、新規登録、編集、削除が可能<br>
+・一般ユーザー：レベル1・・・社員情報の閲覧だけが可能
+</td>
+</tr>
+
+</table>
 
 </section>
 
 <section>
-  <h2>作成したWebアプリケーション</h2>
+<h2>制作物</h2>
 
-  <h3>EmployeeManager（社員情報管理システム）</h3>
+<a href="https://howell0.github.io/self-introduction/product/" class="link-box">
+商品紹介ページを見る
+</a>
 
-  <div class="grid">
-    <div>
-      <p><strong>機能</strong></p>
-      <ul>
-        <li>ログイン / ログアウト</li>
-        <li>ユーザーレベルによる機能制限</li>
-        <li>社員情報の閲覧・登録・編集・削除</li>
-      </ul>
-    </div>
-
-    <div>
-      <p><strong>技術</strong></p>
-      <ul>
-        <li>Java / Servlet / JSP / HTML / SQL</li>
-        <li>Eclipse / MySQL</li>
-      </ul>
-    </div>
-  </div>
-
-  <p>
-    ※ユーザーレベルによる機能制限<br>
-    レベル3（管理者）：全操作可能<br>
-    レベル2（管理職）：社員管理可能<br>
-    レベル1（一般）：閲覧のみ
-  </p>
+<a href="https://howell0.github.io/self-introduction/company/" class="link-box">
+会社ホームページを見る
+</a>
 
 </section>
 
-<section>
-  <h2>制作物</h2>
-
-  <!-- ★ここだけURL差し替え -->
-  <a href="https://あなたのID.github.io/product/" class="link-box">
-    商品紹介ページを見る
-  </a>
-
-  <a href="https://あなたのID.github.io/company/" class="link-box">
-    会社ホームページを見る
-  </a>
-
-</section>
+</div>
 
 <footer>
-  <p>© 2026 Portfolio</p>
+<p>© 2026 imamura</p>
 </footer>
 
 </body>
