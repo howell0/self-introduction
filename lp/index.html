@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company LP</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* メイン */
+.hero {
+  background: linear-gradient(135deg, #4ca1af, #2c3e50);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+}
+
+.hero p {
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #fff;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* セクション */
+.section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  border-left: 5px solid #4ca1af;
+  padding-left: 10px;
+}
+
+/* サービス */
+.services {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* CTA */
+.cta {
+  background: #4ca1af;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* フッター */
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+
+  .services {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tech Solutions</h1>
+  <div>Service / Contact</div>
+</header>
+
+<section class="hero">
+  <h2>ビジネスを加速するITソリューション</h2>
+  <p>クラウド・Web開発・インフラ構築まで一貫対応</p>
+  <a href="#" class="btn">お問い合わせ</a>
+</section>
+
+<section class="section">
+  <h2>サービス</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>クラウド構築</h3>
+      <p>AWS・GCPを活用したインフラ構築</p>
+    </div>
+
+    <div class="card">
+      <h3>Web制作</h3>
+      <p>企業サイト・ECサイト制作</p>
+    </div>
+
+    <div class="card">
+      <h3>システム開発</h3>
+      <p>業務効率化アプリの開発</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <h2>強み</h2>
+  <p>
+  インフラから開発までワンストップで対応可能。<br>
+  小規模から大規模まで柔軟に対応します。
+  </p>
+</section>
+
+<section class="cta">
+  <h2>まずはお気軽にご相談ください</h2>
+  <a href="#" class="btn">お問い合わせ</a>
+</section>
+
+<footer>
+  <p>© 2026 Tech Solutions</p>
+</footer>
+
+</body>
+</html>
