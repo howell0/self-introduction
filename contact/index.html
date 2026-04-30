@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #4ca1af;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2c3e50;
+}
+
+/* エラーメッセージ */
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>お問い合わせ</h1>
+
+  <form id="contactForm">
+    
+    <div class="form-group">
+      <label>お名前</label>
+      <input type="text" id="name" required>
+      <div class="error" id="nameError"></div>
+    </div>
+
+    <div class="form-group">
+      <label>メールアドレス</label>
+      <input type="email" id="email" required>
+      <div class="error" id="emailError"></div>
+    </div>
+
+    <div class="form-group">
+      <label>お問い合わせ内容</label>
+      <textarea id="message" rows="5" required></textarea>
+      <div class="error" id="messageError"></div>
+    </div>
+
+    <button type="submit">送信</button>
+
+    <div class="success" id="successMsg"></div>
+
+  </form>
+</div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+  e.preventDefault(); // ページリロード防止
+
+  // 値取得
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // エラー初期化
+  document.getElementById("nameError").textContent = "";
+  document.getElementById("emailError").textContent = "";
+  document.getElementById("messageError").textContent = "";
+  document.getElementById("successMsg").textContent = "";
+
+  let isValid = true;
+
+  // 名前チェック
+  if (name === "") {
+    document.getElementById("nameError").textContent = "名前を入力してください";
+    isValid = false;
+  }
+
+  // メールチェック
+  if (email === "") {
+    document.getElementById("emailError").textContent = "メールアドレスを入力してください";
+    isValid = false;
+  }
+
+  // 内容チェック
+  if (message === "") {
+    document.getElementById("messageError").textContent = "お問い合わせ内容を入力してください";
+    isValid = false;
+  }
+
+  // 成功時
+  if (isValid) {
+    document.getElementById("successMsg").textContent = "送信が完了しました（デモ）";
+  }
+
+});
+</script>
+
+</body>
+</html>
